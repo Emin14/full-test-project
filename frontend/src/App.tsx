@@ -4,9 +4,20 @@ import viteLogo from '/vite.svg'
 const API_URL = import.meta.env.VITE_API_URL
 import './App.css'
 
+type Tour =  {
+    id: number,
+    name: string,
+    location: string,
+    price: number,
+    rating: number,
+    description: string,
+    image: string,
+    category: string,
+  }
+
 function App() {
   const [count, setCount] = useState(0)
-  const [tours, setTours] = useState([])
+  const [tours, setTours] = useState<Tour[]>([])
 
   const fetchData = async () => {
     const res = await fetch(`${API_URL}/api/tours`)
