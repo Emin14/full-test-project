@@ -1,0 +1,17 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: DockerFile.dev
+    ports: 
+      - 3000:3000
+    container_name: travel-server
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: DockerFile.dev
+    ports:
+      - 5173:5173
+    container_name: travel-frontend
+
