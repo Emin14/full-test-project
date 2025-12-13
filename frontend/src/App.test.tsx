@@ -36,4 +36,11 @@ describe('App', () => {
     expect(fetchSpy).toHaveBeenCalledTimes(1)
     expect(fetchSpy).toHaveBeenCalledWith('/api/tours')
   })
+
+  test('should return true', async () => {
+    render(<App />)
+
+    expect(screen.getByRole('heading')).toHaveTextContent(/react/i)
+
+  })
 })
