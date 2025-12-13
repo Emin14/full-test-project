@@ -40,7 +40,7 @@ describe('App', () => {
   test('should return true', async () => {
     render(<App />)
 
-    expect(screen.getByRole('heading')).toHaveTextContent(/react/i)
+    expect(screen.getByRole('heading')).toHaveTextContent(/angular/i)
 
   })
 })
