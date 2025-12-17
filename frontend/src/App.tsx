@@ -49,7 +49,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
         <p>
-          New5
+          New6
         </p>
       </div>
       <p className="read-the-docs">
