@@ -1,12 +1,12 @@
 services:
   backend:
-    image: ghcr.io/emin14/full-test-project-frontend:latest
+    image: ghcr.io/emin14/full-test-project-backend:latest
     expose:
       - "3000"
     container_name: travel-server
   
   frontend:
-    image: ghcr.io/emin14/full-test-project-backend:latest
+    image: ghcr.io/emin14/full-test-project-frontend:latest
     ports:
       - 80:80
     container_name: travel-frontend
