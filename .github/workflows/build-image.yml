@@ -30,6 +30,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./frontend
+          file: ./frontend/DockerFile.production
           push: true
           tags: ${{ env.FRONTEND_IMAGE }}
 
@@ -37,5 +38,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./backend
+          file: ./backend/DockerFile.production
           push: true
           tags: ${{ env.BACKEND_IMAGE }}
