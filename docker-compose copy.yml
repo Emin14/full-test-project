@@ -1,12 +1,16 @@
 services:
   backend:
-    image: ghcr.io/emin14/full-test-project-frontend:latest
+    build:
+      context: ./backend
+      dockerfile: DockerFile.production
     expose:
       - "3000"
     container_name: travel-server
   
   frontend:
-    image: ghcr.io/emin14/full-test-project-backend:latest
+    build:
+      context: ./frontend
+      dockerfile: DockerFile.production
     ports:
       - 80:80
     container_name: travel-frontend
